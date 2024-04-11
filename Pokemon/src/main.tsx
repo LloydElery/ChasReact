@@ -8,6 +8,7 @@ import {
   Outlet,
 } from "react-router-dom";
 import About from "./pages/About";
+import Weather from "./pages/Weather";
 
 const router = createBrowserRouter([
   {
@@ -16,7 +17,8 @@ const router = createBrowserRouter([
       <>
         <nav>
           <h1>Navbar</h1>
-          <Link to={"about"}>About</Link> | <Link to={"app"}>App</Link>
+          <Link to={"about"}>About</Link> | <Link to={"app"}>App</Link> |{" "}
+          <Link to={"weather"}>Weather</Link>
         </nav>
         <Outlet></Outlet>
       </>
@@ -29,6 +31,10 @@ const router = createBrowserRouter([
       {
         path: "about",
         element: <About></About>,
+      },
+      {
+        path: "weather",
+        element: <Weather></Weather>,
       },
     ],
   },

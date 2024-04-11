@@ -1,5 +1,3 @@
-import { Children } from "react";
-
 // Deklarera en prop med TS
 const About = () => {
   return <div>About</div>;

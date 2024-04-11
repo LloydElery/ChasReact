@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useRef, useState } from "react";
 import "./App.css";
 
 function App() {
@@ -33,9 +33,12 @@ function App() {
     getPokemon();
   }, [pokemon]); */
 
+  // Hantera knappar och input
   return (
     <>
-      <input ref={inputRef} defaultValue={""}></input>
+      <input ref={inputRef} defaultValue={""}></input>{" "}
+      {/* Det är bra att ha en ref på inputs för att minimera state-changes */}
+      {/* Det går att använda onChange={} eventet istället för input event */}
       <br />
       <button onClick={() => handleClick()}>I choose you</button>
       {pokemonData.map((pokemon: any) => (

@@ -17,7 +17,7 @@ const router = createBrowserRouter([
       <>
         <nav>
           <h1>Navbar</h1>
-          <Link to={"about"}>About</Link> | <Link to={"app"}>App</Link> |{" "}
+          <Link to={"about"}>About</Link> | <Link to={"app"}>Pokédex</Link> |{" "}
           <Link to={"weather"}>Weather</Link>
         </nav>
         <Outlet></Outlet>

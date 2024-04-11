@@ -1,11 +1,17 @@
-import Location from "./components/Location";
+import { ThemeProvider } from "@material-tailwind/react";
+import React from "react";
+import Header from "./components/header/Header";
+import { Outlet } from "react-router-dom";
 
-function App() {
+const App = () => {
   return (
-    <div>
-      <Location></Location>
-    </div>
+    <React.StrictMode>
+      <ThemeProvider>
+        <Header></Header>
+        <Outlet></Outlet>
+      </ThemeProvider>
+    </React.StrictMode>
   );
-}
+};
 
 export default App;

@@ -1,31 +1,34 @@
 import ReactDOM from "react-dom/client";
-import App from "./App.tsx";
+import App from "./App";
 import "./index.css";
-import { createBrowserRouter, Outlet, RouterProvider } from "react-router-dom";
-import Cv from "./components/miniprojekt-v15/Cv.tsx";
-import Header from "./components/header/Header.tsx";
+import {
+  Link,
+  RouterProvider,
+  createBrowserRouter,
+  Outlet,
+} from "react-router-dom";
+import About from "./pages/About";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: (
       <>
-        <Header></Header> {/* Header and all content */}
+        <nav>
+          <h1>Navbar</h1>
+          <Link to={"about"}>About</Link> | <Link to={"app"}>App</Link>
+        </nav>
         <Outlet></Outlet>
       </>
     ),
     children: [
       {
-        path: "about",
-        element: <div>About</div>,
-      },
-      {
         path: "app",
         element: <App></App>,
       },
       {
-        path: "cv",
-        element: <Cv></Cv>,
+        path: "about",
+        element: <About></About>,
       },
     ],
   },

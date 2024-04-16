@@ -6,6 +6,7 @@ const Card = ({
   colorChoise: string;
   children: React.ReactNode;
 }) => {
+  console.log(children);
   return <div className={colorChoise}>{children}</div>;
 };
 

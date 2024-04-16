@@ -1,6 +1,13 @@
+import Card from "../components/Cards";
+
 // Deklarera en prop med TS
 const About = () => {
-  return <div>About</div>;
+  return (
+    <>
+      <Card colorChoise="Card" children></Card>
+      <div>About</div>
+    </>
+  );
 };
 
 export default About;

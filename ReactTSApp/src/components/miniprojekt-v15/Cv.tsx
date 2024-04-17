@@ -1,3 +1,11 @@
+import Projects from "./Projects";
+
 function Cv() {
-  return <main></main>;
+  return (
+    <main>
+      <Projects></Projects>
+    </main>
+  );
 }
+
+export default Cv;

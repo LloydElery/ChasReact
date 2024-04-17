@@ -1,6 +1,6 @@
 import { create } from "zustand";
 
-const useUserLocationStore = create((set) => ({
+export const useUserLocationStore = create((set) => ({
   userLocation: {
     latitude: 0,
     longitude: 0,
@@ -8,5 +8,3 @@ const useUserLocationStore = create((set) => ({
   updateUserLocation: (updatedLocation: any) =>
     set({ userLocation: updatedLocation }),
 }));
-
-export default useUserLocationStore;

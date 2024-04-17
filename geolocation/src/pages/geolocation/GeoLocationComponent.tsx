@@ -1,5 +1,4 @@
-import { useState } from "react";
-import useUserLocationStore from "../store/useUserLocationStore";
+import { useUserLocationStore } from "../store/useUserLocationStore";
 
 const GeoLocationComponent = () => {
   /*   const [userPosition, setUserPosition] = useState<{
@@ -7,7 +6,12 @@ const GeoLocationComponent = () => {
     longitude: number;
   } | null>(null);
  */
+  const APIKEY = import.meta.env.VITE_API_KEY;
+  const lat = "";
+  const lon = "";
+  const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${APIKEY}`;
   const userPosition = useUserLocationStore((state: any) => state.userLocation);
+  console.log(userPosition);
   const setUserPosition = useUserLocationStore(
     (state: any) => state.updateUserLocation
   );

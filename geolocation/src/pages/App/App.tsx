@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 
 import "./App.css";
-import useUserLocationStore from "../store/useUserLocationStore";
+import { useUserLocationStore } from "../store/useUserLocationStore";
 
 function App() {
   const [room, setRoom] = useState(0);

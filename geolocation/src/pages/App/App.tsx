@@ -20,7 +20,6 @@ function App() {
   return (
     <>
       <div>
-        <h1>App of the week</h1>
         <p>Welcome to my app</p>
         <p>Room: {room}</p>
         <button onClick={() => setRoom((room) => room + 1)}>

@@ -15,7 +15,7 @@ const router = createBrowserRouter([
     element: (
       <>
         <div>
-          <h1>Welcome to lilps corner</h1>
+          <h1>Geolocation App</h1>
           <Link to="about">About</Link> | <Link to="app">App</Link> |{" "}
           <Link to={"geolocation"}>GeoLocation</Link>
         </div>

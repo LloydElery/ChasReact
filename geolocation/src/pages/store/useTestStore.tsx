@@ -1,7 +1,17 @@
 import { create } from "zustand";
 import { immer } from "zustand/middleware/immer";
 
-export const useUserLocationStore = create(
+interface Location {
+  userLocation: {
+    latitude: number;
+    longitude: number;
+  };
+}
+
+export const useUserLocationStore = create<
+  Location,
+  ["zustand/immer", unknown][]
+>(
   immer((set) => ({
     userLocation: {
       latitude: 0,

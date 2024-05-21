@@ -3,8 +3,8 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 
 function App() {
-  const [user, setUser] = useState([]);
-  const [profile, setProfile] = useState([]);
+  const [user, setUser] = useState(null);
+  const [profile, setProfile] = useState(null);
 
   const login = useGoogleLogin({
     onSuccess: (codeResponse) => setUser(codeResponse),
@@ -13,7 +13,7 @@ function App() {
 
   useEffect(() => {
     // If the user is a authorized `user`...
-    if (user) {
+    if (user !== null) {
       axios
         // ...get the profile
         .get(
